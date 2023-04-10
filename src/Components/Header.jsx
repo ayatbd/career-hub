@@ -1,11 +1,16 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
         <nav>
-            <h4>JobLit</h4>
+            
+            <Link to="/">JobHub</Link>
+
             <ul>
-                <li></li>
+                <li>
+                    <NavLink to="/blog">Blog</NavLink>
+                </li>
                 <li></li>
                 <li></li>
             </ul>
