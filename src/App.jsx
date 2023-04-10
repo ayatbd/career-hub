@@ -10,7 +10,7 @@ function App() {
   const navigation  = useNavigation();
 
   return (
-    <div className="">
+    <div className="px-5 pt-5">
       <Header></Header>
       
       <div>{navigation.state === 'loading' && 'Loading...' }</div>

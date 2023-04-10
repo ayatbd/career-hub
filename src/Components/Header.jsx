@@ -22,7 +22,7 @@ const Header = () => {
                     <NavLink to="/blog">Blog</NavLink>
                 </li>
             </ul>
-            <button className='cornflower-blue p-3 rounded'>Star Applying</button>
+            <button className='cornflower-blue p-2 rounded'>Star Applying</button>
         </nav>
     );
 };
