@@ -1,0 +1,10 @@
+.cornflower-blue{
+    background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+}
+.cornflower-blue-color{
+    color: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+}
+
+.my-custom{
+    @apply hover:text-blue-700 hover:underline hover:underline-offset-4
+  }

@@ -1,20 +1,28 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import "./Custom.css"
 
 const Header = () => {
     return (
-        <nav>
+        <nav className='flex justify-between items-center'>
             
-            <Link to="/">JobHub</Link>
+            <Link className='text-2xl font-bold' to="/">JobHub</Link>
 
-            <ul>
-                <li>
+            <ul className='flex gap-9'>
+                <li className='my-custom'>
+                    <NavLink to="/">Home</NavLink>
+                </li>
+                <li className='my-custom'>
+                    <NavLink to="/statistics">Statistics</NavLink>
+                </li>
+                <li className='my-custom'>
+                    <NavLink to="/jobs">Applied Jobs</NavLink>
+                </li>
+                <li className='my-custom'>
                     <NavLink to="/blog">Blog</NavLink>
                 </li>
-                <li></li>
-                <li></li>
             </ul>
-            <button>Star Applying</button>
+            <button className='cornflower-blue p-3 rounded'>Star Applying</button>
         </nav>
     );
 };
