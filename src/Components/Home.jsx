@@ -9,7 +9,7 @@ import Jobs from "./Jobs";
 
 const Home = () => {
   const handleJobsCard = id => {
-    console.log(id)
+    // console.log(id)
   }
 
   const jobsData = useLoaderData();

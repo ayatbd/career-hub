@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Jobs = ({job, handleJobsCard}) => {
   const {id, picture, title, title_info, location, salary} = job
-    console.log(handleJobsCard)
+    // console.log(handleJobsCard)
 
   return (
     <div className="border flex flex-col justify-center items-start rounded-md p-10 space-y-3">
@@ -16,7 +16,7 @@ const Jobs = ({job, handleJobsCard}) => {
       <div className="flex gap-4">
           <h6>{location}</h6> <h6>{salary}</h6>
       </div>
-      <button onClick={() => handleJobsCard(id)} className="bg-violet-500 py-2 px-4 rounded hover:bg-violet-300"><Link to={`book/${id}`}>View Details</Link></button>
+      <button className="bg-violet-500 py-2 px-4 rounded hover:bg-violet-300"><Link to={`/${id}`}>View Details</Link></button>
       
     </div>
   );
