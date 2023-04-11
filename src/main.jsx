@@ -6,34 +6,39 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Components/Home";
 import ErrorPage from "./Components/ErrorPage";
 import Blog from "./Components/Blog";
-import Statistics from './Components/Statistics';
+import Statistics from "./Components/Statistics";
 import AppliedJobs from "./Components/AppliedJobs";
+import JobDetails from "./Components/JobDetails";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
-    children:[
-    {path: "/",
-     element: <Home></Home>
-    },
-    {
-      path: "/blog",
-      element: <Blog></Blog>
-    },
-    {
-      path: "/statistics",
-      element: <Statistics></Statistics>
-    },
-    {
-      path: "/jobs",
-      element: <AppliedJobs></AppliedJobs>
-    },
-    {
-      path: "*",
-      element: <ErrorPage></ErrorPage>
-    }
-    ]
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("jobInfo.json"),
+      },
+      {
+        path: "Home/:id",
+        element: <JobDetails></JobDetails>,
+        loader: ( {params} ) => fetch("jobInfo.json"),
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "/statistics",
+        element: <Statistics></Statistics>,
+      },
+      {
+        path: "/jobs",
+        element: <AppliedJobs></AppliedJobs>,
+      },
+    ],
   },
 ]);
 

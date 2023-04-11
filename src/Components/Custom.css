@@ -8,3 +8,8 @@
 .my-custom{
     @apply hover:text-blue-700 hover:underline hover:underline-offset-4
   }
+
+  .logo-size{
+    width: 60px;
+    height: 140px;
+  }
