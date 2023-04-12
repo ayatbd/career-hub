@@ -19,12 +19,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("jobInfo.json"),
+        loader: () => fetch("/jobInfo.json"),
       },
       {
-        path: "/:jobId",
+        path: "/jobDetails/:jobId",
         element: <JobDetails></JobDetails>,
-        loader: ({params}) => fetch(`jobInfo.json/${params.friendId}`)
+        loader: ({params}) => fetch(`/jobInfo.json/${params.jobId}`)
+        // loader: ({params}) => fetch(`https://api.npoint.io/3ea6bd959126711e1d96/${params.jobId}`)
       },
       {
         path: "/blog",
