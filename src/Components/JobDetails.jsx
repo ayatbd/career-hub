@@ -4,10 +4,8 @@ import { useLoaderData, useParams } from 'react-router-dom';
 
 const JobDetails = () => {
     const { jobId } = useParams();
-    // const jobData = useLoaderData();
 
     const [job, setJob] = useState({})
-    // const [cart, setCart] = useState([])
 
     useEffect(() => {
         fetch("/jobInfo.json")
@@ -15,7 +13,6 @@ const JobDetails = () => {
         .then((data) => {
             const jobData = data.find((job) => job.id == jobId);
             setJob(jobData);
-            // console.log(job)
         })
       },[jobId])
 
