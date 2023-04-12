@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 
 const JobDetails = () => {
     const { jobId } = useParams();
-    const jobData = useLoaderData;
-    const job = jobData.find((j) => j.id === jobId);
-    // console.log(job);
-    // console.log(jobId)
+    // const jobData = useLoaderData();
+
+    const [job, setJob] = useState({})
+    // const [cart, setCart] = useState([])
+
+    useEffect(() => {
+        fetch("/jobInfo.json")
+        .then(response => response.json())
+        .then((data) => {
+            const jobData = data.find((job) => job.id == jobId);
+            setJob(jobData);
+            // console.log(job)
+        })
+      },[jobId])
+
+    console.log(job);
+
     return (
         <div>
-            <h3>here are job details</h3>
+            <h3>here are job det</h3>
         </div>
     );
 };
