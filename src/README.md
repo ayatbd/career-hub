@@ -1,2 +1,2 @@
 ## Live Link
-Hosted in Netlify -> [HeroGadget](https://herogadget.netlify.app/)
+Hosted in Netlify -> [JobCareer](https://sparkly-malasada-03dab6.netlify.app/)
